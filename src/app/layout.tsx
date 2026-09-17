@@ -31,6 +31,20 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja">
+      <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXFP18WL67" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-KXFP18WL67');
+            `,
+          }}
+        />
+      </head>
       <body>
         <ScrollToTop />
         <div className="flex min-h-svh flex-col">
