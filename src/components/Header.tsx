@@ -34,7 +34,7 @@ export default function Header({ view, savedCount, onHome, onOpenMyList }: Heade
             <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-sky-400 to-blue-400 text-white shadow-sm">
               <Luggage size={18} />
             </span>
-            <span className="text-sm font-bold">持ち物チェッカー</span>
+            <span className="text-sm font-bold">持ち物チェックリスト</span>
           </button>
         )}
 
