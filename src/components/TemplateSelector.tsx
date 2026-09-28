@@ -17,11 +17,11 @@ export default function TemplateSelector({ onSelect, onOpenMyList, savedCount }:
           🧳
         </span>
         <h1 className="text-xl font-bold text-slate-700">持ち物チェックリスト</h1>
-        <p className="max-w-md text-sm text-slate-500">
+        <h2 className="max-w-md text-sm font-normal text-slate-500">
           旅行・お出かけ・イベントの持ち物を、テンプレートから
           <br className="hidden sm:block" />
           サッと作って、チェック・保存・共有できる無料アプリ。登録不要！
-        </p>
+        </h2>
       </div>
 
       <button

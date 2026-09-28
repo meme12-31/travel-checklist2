@@ -10,6 +10,9 @@ const SITE_DESCRIPTION =
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://hit-tool.com'),
+  alternates: {
+    canonical: '/travel-checklist',
+  },
   title: {
     default: SITE_TITLE,
     template: `%s｜${SITE_TITLE}`,
