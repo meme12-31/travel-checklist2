@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
-import { Suspense } from 'react'
-import ChecklistApp from '@/components/ChecklistApp'
+import TravelChecklistClient from '@/components/TravelChecklistClient'
+import ArticlesSection from '@/components/ArticlesSection'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://hit-tool.com'),
@@ -29,10 +29,46 @@ export const metadata: Metadata = {
   },
 }
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: '持ち物チェックリスト',
+  url: 'https://hit-tool.com/travel-checklist',
+  description:
+    '旅行や出張、日帰りのお出かけに必要な持ち物をサクッと作成・管理できるチェックリストツール。忘れ物を防いで、出発前のパッキングや準備をストレスなくスムーズに完結させましょう！',
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'All',
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'JPY',
+  },
+}
+
 export default function HomePage() {
   return (
-    <Suspense fallback={<div className="flex flex-1 flex-col" />}>
-      <ChecklistApp />
-    </Suspense>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <TravelChecklistClient
+        introHeader={
+          <div className="flex flex-col items-center gap-2 text-center">
+            <span className="text-5xl" aria-hidden="true">
+              🧳
+            </span>
+            <h1 className="text-xl font-bold text-slate-700">持ち物チェックリスト</h1>
+            <h2 className="max-w-md text-sm font-normal text-slate-500">
+              旅行・お出かけ・イベントの持ち物を、テンプレートから
+              <br className="hidden sm:block" />
+              サッと作って、チェック・保存・共有できる無料アプリ。登録不要！
+            </h2>
+          </div>
+        }
+      >
+        <ArticlesSection />
+      </TravelChecklistClient>
+    </>
   )
 }
