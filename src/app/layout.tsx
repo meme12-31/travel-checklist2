@@ -7,7 +7,7 @@ import './globals.css'
 
 const SITE_TITLE = '持ち物リストチェッカー'
 const SITE_DESCRIPTION =
-  '旅行やイベントの持ち物リストを簡単に作成・チェック・共有できる無料アプリ。登録不要。'
+  '旅行や出張、日帰りのお出かけに必要な持ち物を簡単に作成・管理できるチェックリストツールです。必要な持ち物を確認しながら準備できるので、出発前のパッキングや忘れ物防止に便利。忙しい朝の準備にも役立ち、無料・登録不要で使えます。'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://hit-tool.com'),
