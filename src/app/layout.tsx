@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { APP_BASE_PATH, publicAssetUrl } from '@/constants/paths'
 import Footer from '@/components/Footer'
+import RelatedToolsFooter from '@/components/RelatedToolsFooter'
 import ScrollToTop from '@/components/ScrollToTop'
 import './globals.css'
 
@@ -52,6 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ScrollToTop />
         <div className="flex min-h-svh flex-col">
           {children}
+          <RelatedToolsFooter currentAppId="travel-checklist" />
           <Footer />
         </div>
       </body>
