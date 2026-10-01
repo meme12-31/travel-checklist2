@@ -12,21 +12,21 @@ interface ToolItem {
 const ALL_TOOLS: ToolItem[] = [
   {
     id: 'recipe-calculator',
-    name: 'レシピ人数変更・調味料ｇ変換 | ケーキ型サイズ変更',
+    name: 'レシピ人数変更・調味料g変換 | ケーキ型サイズ変更',
     url: 'https://hit-tool.com/recipe-calculator',
     description: '人数の変更やケーキ型のサイズ変更に伴う調味料・材料の分量を自動計算するツール',
     icon: <Utensils className="w-5 h-5 text-orange-500" />,
   },
   {
     id: 'zubora-recipe',
-    name: '冷蔵庫レスキュー｜あまり物でズボラ飯',
+    name: '冷蔵庫レスキュー | あまり物でズボラ飯',
     url: 'https://hit-tool.com/zubora-recipe',
     description: '冷蔵庫に残っている余り物から作れるズボラ飯・簡単レシピを提案するツール',
     icon: <CookingPot className="w-5 h-5 text-amber-500" />,
   },
   {
     id: 'calcnote',
-    name: 'CalcNote - メモ＆手書きができる無料電卓アプリ',
+    name: 'CalcNote | メモ＆手書きができる無料Web電卓アプリ',
     url: 'https://hit-tool.com/calcnote',
     description: 'テキストと一緒に計算式を残して自動計算・保存ができる計算メモツール',
     icon: <Calculator className="w-5 h-5 text-blue-500" />,
@@ -63,23 +63,23 @@ export const RelatedToolsFooter: React.FC<Props> = ({ currentAppId }) => {
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="flex flex-col gap-3 w-full">
           {relatedTools.map((tool) => (
             <a
               key={tool.id}
               href={tool.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group p-4 bg-white rounded-xl border border-stone-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 hover:border-amber-400 transition-all duration-200 flex items-start gap-3.5"
+              className="w-full h-auto group p-4 bg-white rounded-xl border border-stone-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 hover:border-amber-400 transition-all duration-200 flex items-start gap-3.5"
             >
-              <div className="p-2 rounded-lg bg-stone-50 group-hover:bg-amber-50 transition-colors">
+              <div className="flex-shrink-0 p-2 rounded-lg bg-stone-50 group-hover:bg-amber-50 transition-colors">
                 {tool.icon}
               </div>
               <div className="flex-1 min-w-0">
-                <div className="font-bold text-gray-800 text-sm group-hover:text-amber-700 transition-colors truncate">
+                <div className="font-bold text-gray-800 text-sm group-hover:text-amber-700 transition-colors break-words whitespace-normal">
                   {tool.name}
                 </div>
-                <div className="text-xs text-gray-500 mt-1 line-clamp-1">
+                <div className="text-xs text-gray-500 mt-1 break-words whitespace-normal leading-relaxed">
                   {tool.description}
                 </div>
               </div>
