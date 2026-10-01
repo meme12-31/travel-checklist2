@@ -19,6 +19,14 @@ export const metadata: Metadata = {
     template: `%s｜${SITE_TITLE}`,
   },
   description: SITE_DESCRIPTION,
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   icons: {
     icon: [{ url: publicAssetUrl('favicon.svg'), type: 'image/svg+xml' }],
   },

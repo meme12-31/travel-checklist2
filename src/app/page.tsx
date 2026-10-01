@@ -10,6 +10,14 @@ export const metadata: Metadata = {
   title: '持ち物チェックリスト | 国内外の旅行・出張・お出かけの準備を効率化',
   description:
     '旅行や出張、日帰りのお出かけに必要な持ち物をサクッと作成・管理できるチェックリストツール。忘れ物を防いで、出発前のパッキングや準備をストレスなくスムーズに完結させましょう！',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   openGraph: {
     title: '持ち物チェックリスト | 国内外の旅行・出張・お出かけの準備を効率化',
     description:
